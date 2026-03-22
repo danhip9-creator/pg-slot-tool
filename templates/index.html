@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>PG Slot Tool</title>
+</head>
+
+<body>
+
+<h2>PG Slot Analyzer</h2>
+
+<form method="post" action="/analyze">
+
+<select name="game">
+<option>Mahjong Ways 2</option>
+<option>Lucky Neko</option>
+<option>Fortune Tiger</option>
+</select>
+
+<br><br>
+
+<input name="capital" placeholder="Nhập vốn vd 800000">
+
+<br><br>
+
+<button type="submit">Phân tích</button>
+
+</form>
+
+{% if result %}
+
+<h3>Kết quả</h3>
+
+Game: {{result.game}} <br>
+Bet đề xuất: {{result.bet}} <br>
+Stop loss: {{result.stoploss}} <br>
+Stop win: {{result.stopwin}}
+
+{% endif %}
+
+</body>
+</html>
